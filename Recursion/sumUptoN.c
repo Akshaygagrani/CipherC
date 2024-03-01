@@ -1,54 +1,43 @@
-// Recursion -: A function calls itself is knows as a recursive function. and,
-            //  this technique is known as Recursion
+// Recursion porblems
+// Write a program to find the sum of numbers from 1 to n via recursion, where n>=1
+// Ex1
+// n = 1
+// Output: 1
 
-// Syntax:
+// Ex2
+// n = 5->4->3->2->1
+// output = 15
 
-// void fun(){
-//     ...
-//     ....
-//     fun();
-//     .....
-    
-// }
-
-// int main(){
-//     ...
-//     ....
-//     fun();
-//     .....
-//     ......
-// }
-
-//  Let's find the sum of natural numbers from 1 to n using recursion
-
-// input = 5
-// sum - 15+0 = 15
-// 0
 #include <stdio.h>
 
-int getSum(int n); // Function Prototype
-
+int getSum(int); //Function Prototyping
 int main()
 {
-    int a, sum;
-    printf("Give me an integer: ");
-    scanf("%d", &a);
+    int n;
+    int sum;
+    
+    printf("Input the number n: ");
+    scanf("%d", &n);
+    
+    sum = getSum(n);
+    
+    printf("The output is: %d", sum);
 
-    sum = getSum(a);
-    printf("\nThe sum received is : %d", sum);
     return 0;
 }
 
-int getSum(int n){
-    int result;
-    
+// The Key of the recursive solution is to believe that 
+// - Your recursive function call will bring the right answer for you !!
+
+int getSum(int x){
+    int res;
     // Base Case
-    if(n==1){
+    if(x == 1){
         return 1;
     }else{
-        result = n + getSum(n-1);
-        // f(n) = n + f(n-1);
+        // Recursive call
+        res = x + getSum(x-1);
     }
+    return res;
     
-    return result;
 }
