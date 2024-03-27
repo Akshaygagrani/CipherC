@@ -13,7 +13,7 @@ int main() {
 ```
 **Output**
 ```
-Programiz
+Cipher
 ```
 
 ## String Input
@@ -136,7 +136,7 @@ Xohn Williams
 ```
 ---
  
-## Programiz Quiz
+## Quiz
  
 Q.  What will be the value of the name variable if we provide Jack Sparrow as input value?
 
