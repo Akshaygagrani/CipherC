@@ -1,73 +1,68 @@
-// Types of Pointers 
-    // If we consider the type of variable stored in the memotry location
-    // pointed by the pointer, then the pointers can be classified
-    // into following types;
+// Types Of Pointers
+- Point to Derived data Types such as Arrays
+- Point to premitive data Types such as int
+- Point to User-defined data types such as Arrays
 
-1. Integer pointers :
-// - They are the pointers to the integer values
-// Syntax: int *ptr
-// pointer to integer
+1. Integer Pointers - 
+- As the name suggest, an integer pointer is nothing but a pointer taht points
+to the integer value;
+Syntax: int *ptr
 
-2. Array Pointer :
-// Pointers and Array are vaery closely related
-// bcz, array name is also the pointer to its first element
-// Array name is also known as Pointer to arrays
+2. Function Pointers - 
+- Are actually little different form the normal pointers 
+as normal pointers points to the data
+but instead funct1n. pointer points to the code block
+- int func(char, float)
+Syntax : int (* ptr)(char, float)
+        ptr = &func;
 
-// Syntax: char *ptr = &arr_name;
+3. NULL Pointer - 
+- The NULL pointers are those that do not points to any memory Location
+- They are created by assigning the NULL values to the pointer
+- Pointer of any type can be assigned the NULL value
+Syntax:
+    data_type *ptr = NULL;
+            or
+    *ptr = NULL
+    
+4. Void Pointer -(Generic Pointers)
+- Void pointers in C are the pointers of type Void.
+- Whoch means that they do not have any associated data type.
+They are also Generic Pointers as they can point to any type and can 
+be typeCasted to any type
+- The void pointers cannot be derefrenced
+Syntax: 
+    void *ptr;
+    
+5. Wild Pointer -
+- The wild pointers that have not been initialised with something yet;
+- These types of C-pointers can cause problems in our programs and can eventually 
+cause them to crash.
+Syntax:
+    int *ptr;
+    char *ptr;
+    
+6. Constant Pointers -
+In constant Pointers the memory address stored inside the pointer is constant and 
+cannot be modified once defined.
+- It will always point to the same memory location
+Syntax:
+    data_type * const ptr_name
+    
+7. Pointer to Constant 
+- The pointer pointing to a constant value taht can not be modified are called 
+pointer to a constant
+Here we can only access the data poitned by the pointer, but can not modify it
+- Although we can change the addess stored in the pointer to constant.
+Syntax:
+    const int *ptr_name
+    
+8. Dangling pointer
+- A pointer pointing to a memory location that has been deleted (or freed) 
+is called a dangling pointer
 
-3. Function Pointers :
-// Function pointer will point to the function.
-// They are diff from the rest of the pointers in the sense
-// that insetead of pointing to the data, they point to the consider
-
-// Syntax: 
-
-// int func(int, char);
-// int (*ptr)(int, char) = &func
-
-// - The syntax of the function pointer changes acc to
-// the func prototype
-
-4. void pointer :
-// The void pointers in C are the pointer of type void
-// Which means, they do not have any associated data type
-// They are also called GENERIC POINTERS
-// as they can point to any type and can be typecasted to any type
-
-// Syntax: void *ptr
-
-// - The void pointer cannot be dereferenced
-
-5. null pointer :
-// The null pointers are the pointers which do not point to any 
-// memory location.
-// They can be created by assigning a null value to the pointer
-// A pointer of any type can be a NULL pointer
-
-// Syntax: data_type *ptr = NULL
-// Eg. int * ptr = NULL
 
 
-6. Wild pointer:
-// A wild pointer is a pointer that is not initialised till its
-// first use 
-// Initially they hold some arbitrary memory location in it, 
-// & this any operation on them might cause the program to crash
-
-// -Wild pointer will neither consist the location of a variable 
-// neither it will consist the Null value
-
-// Syntax: int * ptr; //wild pointer
-
-// Eg: 
-// int main(){
-//     int *ptr;
-//     *ptr = 9;
-// }
-
-Dangling pointer - Dynamic memory alloc
-// The pointer which points to a address of the variable
-// which has been deleted
 
 #include <stdio.h>
 
